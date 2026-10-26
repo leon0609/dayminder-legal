@@ -3,118 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dayminder Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 42rem;
-      margin: 2rem auto;
-      padding: 0 1.25rem;
-      color: #1a1a1a;
-      background: #fff;
-    }
-    @media (prefers-color-scheme: dark) {
-      body { color: #e8e8e8; background: #111; }
-      a { color: #6eb6ff; }
-    }
-    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; }
-    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
-    @media (prefers-color-scheme: dark) { .meta { color: #999; } }
-    ul { padding-left: 1.25rem; }
-    li { margin: 0.35rem 0; }
-    hr { border: none; border-top: 1px solid #ddd; margin: 2.5rem 0; }
-    @media (prefers-color-scheme: dark) { hr { border-top-color: #333; } }
-    .zh { margin-top: 3rem; }
-  </style>
+  <title>Lovune · 念在 Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Lovune · 念在, a local-first iOS app for important dates and personal notes.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Dayminder Privacy Policy</h1>
-  <p class="meta">Last updated: June 25, 2026<br>Contact: <a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a></p>
+  <nav aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="privacy.html" aria-current="page">Privacy Policy</a>
+    <a href="support.html">Support</a>
+  </nav>
 
-  <p>Dayminder (“we”, “the app”) is a local-first iOS app for remembering important dates. This policy describes how information is handled in the current version of the app.</p>
+  <p class="brand">Lovune · 念在</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: <time datetime="2026-10-26">October 26, 2026</time><br>
+  Developer: ANG LI (individual)<br>
+  Formerly Dayminder. The iOS bundle identifier may still be <code>com.dayminder.app</code>.<br>
+  Contact: <a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a> (no support email is published)</p>
+
+  <p>Lovune · 念在 (“the app”) is a local-first iOS app for remembering important dates and keeping personal notes. This policy describes how information is handled in the app. “We” means ANG LI, the individual developer of the app.</p>
 
   <h2>Summary</h2>
   <ul>
     <li>No account or login is required.</li>
+    <li>The app prefers to keep your dates, notes, and photos on your device.</li>
     <li>We do not operate servers that receive your dates, notes, or photos.</li>
-    <li>Your data stays on your iPhone, except when you use standard device backups (for example iCloud Backup).</li>
+    <li>We do not send your dates, notes, or photos to third-party AI services.</li>
     <li>We do not use third-party analytics or advertising SDKs.</li>
     <li>We do not track you across apps or websites.</li>
+    <li>We do not sell your data.</li>
   </ul>
 
   <h2>Information stored on your device</h2>
-  <p>Dayminder stores the following locally to provide app features:</p>
+  <p>The app stores the following on your iPhone so it can provide its features:</p>
   <ul>
-    <li><strong>Events and settings</strong> — titles, dates, categories, notes, reminders, and preferences (SwiftData).</li>
-    <li><strong>Photos you attach</strong> — when you tap Add photo in Past &amp; Memory, you choose images via the system photo picker; compressed copies and thumbnails are saved in the app sandbox.</li>
-    <li><strong>Widget display data</strong> — a small JSON snapshot shared between the app and its Home Screen widget via Apple’s App Group (<code>group.com.dayminder.app</code>). It contains only display fields needed for countdowns (for example event title and precomputed day counts), not your full database.</li>
-    <li><strong>Pro status cache</strong> — whether Dayminder Pro is active may be cached locally (UserDefaults) so the app works offline between launches.</li>
+    <li><strong>Events, notes, and settings</strong> — titles, dates, categories, notes, reminders, and preferences you enter.</li>
+    <li><strong>Photos you attach</strong> — when you choose to add a photo, you pick images with the system photo picker. Copies and thumbnails are saved in the app’s storage on your device. The app does not scan your photo library when you open it.</li>
+    <li><strong>Widget display data</strong> — a small snapshot shared on your device between the app and its Home Screen widget through Apple’s App Group (<code>group.com.dayminder.app</code>). It contains display fields for countdowns (for example an event title and a day count), not your full set of notes.</li>
+    <li><strong>Pro status cache</strong> — whether a Pro purchase is active may be cached on the device so the app can respect that status offline. The product identifier may still be <code>com.dayminder.app.pro</code>.</li>
   </ul>
 
-  <h2>What we do not collect</h2>
-  <p>Dayminder does not collect contact info, location, health data, contacts, calendar contents, or device advertising identifiers. We do not receive payment card numbers; purchases are processed by Apple.</p>
+  <h2>Optional iCloud and device backup</h2>
+  <p>Your entries stay on your iPhone unless you use an Apple feature that you control.</p>
+  <ul>
+    <li><strong>Device backup.</strong> If you turn on a device backup, such as iCloud Backup, Apple may include this app’s on-device data in that backup. The backup follows your Apple ID and Apple’s settings. We do not receive it.</li>
+    <li><strong>Optional iCloud.</strong> iCloud sync is optional and stays off unless you turn it on. You can use the app without it. If you enable it, the data included in that sync is stored in your personal iCloud account so your own devices can stay in step. We do not run a separate cloud for your journal. Turning it off stops further sync. It does not, by itself, erase copies already on your other devices or in backups you control.</li>
+  </ul>
+  <p>This policy does not add an encryption promise beyond what Apple provides for on-device storage and for iCloud.</p>
+
+  <h2>What we do not receive</h2>
+  <p>We do not require your name, email address, or phone number. We do not receive your contacts, calendar, location, or health data on servers we operate. We do not collect device advertising identifiers. We do not receive your payment card number; purchases are processed by Apple.</p>
 
   <h2>Permissions</h2>
+  <p>The app asks for a system permission when you take an action that needs it, not simply because you opened the app. You can decline. You can change these choices later in iOS Settings.</p>
   <ul>
-    <li><strong>Photos</strong> — requested only when you tap Add photo in Past &amp; Memory, not at launch. We do not scan your entire photo library.</li>
-    <li><strong>Notifications</strong> — requested only when you enable a reminder on an event. You can save events with reminders set to None without any notification prompt.</li>
-    <li><strong>Calendar, Contacts, Reminders</strong> — not used in the current version.</li>
+    <li><strong>Photos</strong> — requested when you choose to add a photo, not at launch.</li>
+    <li><strong>Notifications</strong> — requested when you turn on a reminder for an event. You can leave reminders off and not be asked.</li>
+    <li><strong>Any other system permission</strong> — requested only when you use a feature that needs it.</li>
   </ul>
 
-  <h2>Purchases (Dayminder Pro)</h2>
-  <p>Dayminder Pro is a one-time in-app purchase (<code>com.dayminder.app.pro</code>) processed by Apple StoreKit. Apple handles payment and receipt validation. Restore Purchases uses Apple’s transaction APIs only. We do not store your payment details.</p>
+  <h2>Purchases</h2>
+  <p>Lovune Pro, if you buy it, is a one-time in-app purchase processed by Apple StoreKit. The product identifier may still be <code>com.dayminder.app.pro</code>. Apple handles payment and receipt validation. Restore Purchases uses Apple’s purchase APIs and restores purchase status only. It does not restore your notes or photos. We do not store your payment details.</p>
 
   <h2>Data sharing</h2>
-  <p>We do not sell your data. We do not share your dates, notes, or photos with third parties. The only sharing is on-device between the Dayminder app and its widget extension via App Group, as described above.</p>
+  <p>We do not sell your data, and we do not share it with advertisers or other app developers. Your dates, notes, and photos stay on your device, apart from the on-device widget snapshot described above and, only if you turn it on, iCloud under your own Apple ID.</p>
 
   <h2>Children</h2>
-  <p>Dayminder is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+  <p>Lovune · 念在 is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
   <h2>Changes</h2>
-  <p>We may update this policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the app after changes means you accept the updated policy.</p>
+  <p>We may update this policy from time to time. The “Last updated” date at the top will change when we do.</p>
 
   <h2>Questions</h2>
-  <p>Please open an issue on <a href="https://github.com/leon0609/dayminder/issues">GitHub</a> or contact us through the support channel listed on the App Store product page.</p>
+  <p>This site does not publish a support email. Please open an issue on <a href="https://github.com/leon0609/dayminder/issues">GitHub</a>. See also the <a href="support.html">Support</a> page.</p>
 
   <hr>
 
-  <div class="zh">
-    <h1>Dayminder 隐私政策</h1>
-    <p class="meta">最后更新：2026 年 6 月 25 日</p>
+  <div class="zh" lang="zh-Hans">
+    <p class="brand">Lovune · 念在</p>
+    <h1>隐私政策</h1>
+    <p class="meta">最后更新：<time datetime="2026-10-26">2026 年 10 月 26 日</time><br>
+    开发者：ANG LI（个人）<br>
+    曾用名 Dayminder。iOS 套装 ID 可能仍为 <code>com.dayminder.app</code>。<br>
+    联系方式：<a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a>（本站不公布支持邮箱）</p>
 
-    <p>Dayminder 是一款在设备本地运行的重要日期记录应用。本政策说明当前版本如何处理相关信息。</p>
+    <p>Lovune · 念在是一款在设备本地运行的 iOS 应用，用于记住重要日期并保存个人笔记。本政策说明应用如何处理相关信息。文中“我们”指本应用的个人开发者 ANG LI。</p>
 
     <h2>概要</h2>
     <ul>
       <li>无需注册或登录。</li>
-      <li>我们不运营接收您的日期、笔记或照片的服务器。</li>
-      <li>数据保存在您的 iPhone 上（若您使用 iCloud 等设备备份，备份策略由 Apple 决定）。</li>
-      <li>不使用第三方分析或广告 SDK，不进行跨应用跟踪。</li>
+      <li>应用优先把日期、笔记和照片保存在你的设备上。</li>
+      <li>我们不运营接收你的日期、笔记或照片的服务器。</li>
+      <li>我们不会把你的日期、笔记或照片发送到第三方 AI 服务。</li>
+      <li>不使用第三方分析或广告 SDK，也不进行跨应用或跨网站跟踪。</li>
+      <li>我们不出售你的数据。</li>
     </ul>
 
-    <h2>设备上存储的信息</h2>
+    <h2>保存在设备上的信息</h2>
     <ul>
-      <li><strong>事件与设置</strong>：标题、日期、分类、笔记、提醒等。</li>
-      <li><strong>您主动添加的照片</strong>：仅在 Past &amp; Memory 中点击添加照片时，通过系统选择器选取；缩略图与压缩副本保存在应用沙盒。</li>
-      <li><strong>小组件显示数据</strong>：应用与主屏幕小组件通过 App Group 共享精简 JSON 快照，仅含倒计时展示所需字段。</li>
-      <li><strong>Pro 状态缓存</strong>：购买状态可能在本地缓存以便离线使用。</li>
+      <li><strong>事件、笔记与设置</strong>：你输入的标题、日期、分类、笔记、提醒和偏好。</li>
+      <li><strong>你添加的照片</strong>：在你选择添加照片时，通过系统照片选择器选取。副本与缩略图保存在设备上的应用存储中。打开应用时不会扫描整个照片图库。</li>
+      <li><strong>小组件显示数据</strong>：应用与主屏幕小组件通过 Apple 的 App Group（<code>group.com.dayminder.app</code>）在本机共享一份精简快照，只含倒计时展示所需字段（例如事件标题和天数），不是你的全部笔记。</li>
+      <li><strong>Pro 状态缓存</strong>：是否已购买 Pro 可能缓存在设备上，以便离线时仍能识别该状态。产品标识可能仍为 <code>com.dayminder.app.pro</code>。</li>
     </ul>
+
+    <h2>可选 iCloud 与设备备份</h2>
+    <p>除非你使用由自己控制的 Apple 功能，记录会留在 iPhone 上。</p>
+    <ul>
+      <li><strong>设备备份。</strong>若你开启设备备份（例如 iCloud 备份），Apple 可能把本应用在设备上的数据纳入该备份。备份遵循你的 Apple ID 与 Apple 的设置。我们不会收到这份备份。</li>
+      <li><strong>可选 iCloud。</strong>iCloud 同步是可选的，在你打开之前保持关闭。不开启也可以使用应用。若你开启，纳入同步的数据会存放在你个人的 iCloud 账户中，以便你自己的设备保持一致。我们不为日记另建一套云服务。关闭后会停止继续同步，但不会因此自动删除已经存在于你其他设备或你所控制的备份中的副本。</li>
+    </ul>
+    <p>除 Apple 对设备存储和 iCloud 所提供的保护外，本政策不另作加密承诺。</p>
+
+    <h2>我们不会收到的信息</h2>
+    <p>我们不要求你提供姓名、电子邮箱或电话号码。我们不会在自有服务器上接收你的通讯录、日历、位置或健康数据。我们不收集设备广告标识符。我们不会收到你的支付卡号；购买由 Apple 处理。</p>
 
     <h2>权限</h2>
+    <p>只有在你做出需要某项系统权限的操作时，应用才会请求该权限，而不是仅因为打开了应用。你可以拒绝，也可以稍后在 iOS 设置中更改。</p>
     <ul>
-      <li><strong>照片</strong>：仅在您点击添加照片时请求，启动时不请求。</li>
-      <li><strong>通知</strong>：仅在您为事件开启提醒时请求。</li>
-      <li>当前版本不使用日历、通讯录、提醒事项权限。</li>
+      <li><strong>照片</strong>：在你选择添加照片时请求，启动时不请求。</li>
+      <li><strong>通知</strong>：在你为某个事件打开提醒时请求。提醒保持关闭时，不会因此弹出请求。</li>
+      <li><strong>其他系统权限</strong>：仅在你使用需要该权限的功能时请求。</li>
     </ul>
 
-    <h2>内购</h2>
-    <p>Dayminder Pro 由 Apple StoreKit 处理支付与收据；我们不保存您的支付卡信息。</p>
+    <h2>购买</h2>
+    <p>若你购买 Lovune Pro，它是由 Apple StoreKit 处理的一次性内购。产品标识可能仍为 <code>com.dayminder.app.pro</code>。支付与收据校验由 Apple 完成。恢复购买只通过 Apple 的购买接口恢复购买状态，不会恢复笔记或照片。我们不保存你的支付信息。</p>
 
-    <h2>联系我们</h2>
-    <p><a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a></p>
+    <h2>数据共享</h2>
+    <p>我们不出售你的数据，也不将其分享给广告商或其他应用开发者。日期、笔记和照片保存在你的设备上；除此之外，只有上文所述的本机小组件快照，以及仅在你主动打开时、通过你自己的 Apple ID 使用的 iCloud。</p>
+
+    <h2>儿童</h2>
+    <p>Lovune · 念在并非面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。</p>
+
+    <h2>政策变更</h2>
+    <p>我们可能会更新本政策。更新时，页首的“最后更新”日期会随之改变。</p>
+
+    <h2>问题</h2>
+    <p>本站不公布支持邮箱。请在 <a href="https://github.com/leon0609/dayminder/issues">GitHub</a> 提交 Issue。也可参阅<a href="support.html">支持</a>页面。</p>
   </div>
 </body>
 </html>
