@@ -1,120 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dayminder Privacy Policy</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="data:,">
+  <title>Lovune · 念在隐私说明 | Review draft</title>
   <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 42rem;
-      margin: 2rem auto;
-      padding: 0 1.25rem;
-      color: #1a1a1a;
-      background: #fff;
-    }
-    @media (prefers-color-scheme: dark) {
-      body { color: #e8e8e8; background: #111; }
-      a { color: #6eb6ff; }
-    }
-    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; }
-    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
-    @media (prefers-color-scheme: dark) { .meta { color: #999; } }
-    ul { padding-left: 1.25rem; }
-    li { margin: 0.35rem 0; }
-    hr { border: none; border-top: 1px solid #ddd; margin: 2.5rem 0; }
-    @media (prefers-color-scheme: dark) { hr { border-top-color: #333; } }
-    .zh { margin-top: 3rem; }
-  </style>
+:root { color-scheme: light dark; --paper:#fff; --ink:#242624; --muted:#606660; --rule:#dce1dc; --link:#245e4c; --note:#fff6df; }
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif; font-size:16px; line-height:1.75; }
+main { max-width:48rem; margin:0 auto; padding:28px 24px 48px; }
+nav { display:flex; flex-wrap:wrap; gap:10px 22px; padding-bottom:18px; border-bottom:1px solid var(--rule); font-size:.94rem; }
+a { color:var(--link); text-underline-offset:3px; overflow-wrap:anywhere; }
+a:focus-visible { outline:3px solid var(--link); outline-offset:4px; border-radius:2px; }
+h1 { font-size:clamp(1.7rem,5vw,2.1rem); line-height:1.3; margin:26px 0 10px; }
+h2 { font-size:1.2rem; line-height:1.5; margin:28px 0 8px; }
+h3 { font-size:1.12rem; line-height:1.5; margin:26px 0 8px; }
+p { margin:10px 0; overflow-wrap:anywhere; }
+li { margin:7px 0; overflow-wrap:anywhere; }
+ul { padding-left:1.4rem; }
+.meta { color:var(--muted); font-size:.88rem; }
+.draft { background:var(--note); border-left:3px solid #a77016; padding:12px 16px; margin:20px 0; font-size:.9rem; }
+.intro { font-size:1.04rem; }
+.language { border-top:1px solid var(--rule); margin-top:40px; padding-top:12px; }
+.language > h2 { font-size:1.7rem; }
+footer { margin-top:38px; border-top:1px solid var(--rule); padding-top:16px; font-size:.9rem; color:var(--muted); }
+.skip { position:absolute; left:24px; top:-80px; background:var(--paper); padding:8px; }
+.skip:focus { top:4px; }
+@media(max-width:480px) { main { padding:20px 18px 36px; } nav { gap:8px 18px; } .draft { padding:10px 12px; } }
+@media(prefers-color-scheme:dark) { :root { --paper:#171c19; --ink:#e5ece6; --muted:#b2bcb4; --rule:#3b463e; --link:#a4d7c0; --note:#302919; } }
+@media print { main { max-width:none; } nav,.skip { display:none; } h2,h3 { break-after:avoid; } }
+</style>
 </head>
-<body>
-  <h1>Dayminder Privacy Policy</h1>
-  <p class="meta">Last updated: June 25, 2026<br>Contact: <a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a></p>
-
-  <p>Dayminder (“we”, “the app”) is a local-first iOS app for remembering important dates. This policy describes how information is handled in the current version of the app.</p>
-
-  <h2>Summary</h2>
-  <ul>
-    <li>No account or login is required.</li>
-    <li>We do not operate servers that receive your dates, notes, or photos.</li>
-    <li>Your data stays on your iPhone, except when you use standard device backups (for example iCloud Backup).</li>
-    <li>We do not use third-party analytics or advertising SDKs.</li>
-    <li>We do not track you across apps or websites.</li>
-  </ul>
-
-  <h2>Information stored on your device</h2>
-  <p>Dayminder stores the following locally to provide app features:</p>
-  <ul>
-    <li><strong>Events and settings</strong> — titles, dates, categories, notes, reminders, and preferences (SwiftData).</li>
-    <li><strong>Photos you attach</strong> — when you tap Add photo in Past &amp; Memory, you choose images via the system photo picker; compressed copies and thumbnails are saved in the app sandbox.</li>
-    <li><strong>Widget display data</strong> — a small JSON snapshot shared between the app and its Home Screen widget via Apple’s App Group (<code>group.com.dayminder.app</code>). It contains only display fields needed for countdowns (for example event title and precomputed day counts), not your full database.</li>
-    <li><strong>Pro status cache</strong> — whether Dayminder Pro is active may be cached locally (UserDefaults) so the app works offline between launches.</li>
-  </ul>
-
-  <h2>What we do not collect</h2>
-  <p>Dayminder does not collect contact info, location, health data, contacts, calendar contents, or device advertising identifiers. We do not receive payment card numbers; purchases are processed by Apple.</p>
-
-  <h2>Permissions</h2>
-  <ul>
-    <li><strong>Photos</strong> — requested only when you tap Add photo in Past &amp; Memory, not at launch. We do not scan your entire photo library.</li>
-    <li><strong>Notifications</strong> — requested only when you enable a reminder on an event. You can save events with reminders set to None without any notification prompt.</li>
-    <li><strong>Calendar, Contacts, Reminders</strong> — not used in the current version.</li>
-  </ul>
-
-  <h2>Purchases (Dayminder Pro)</h2>
-  <p>Dayminder Pro is a one-time in-app purchase (<code>com.dayminder.app.pro</code>) processed by Apple StoreKit. Apple handles payment and receipt validation. Restore Purchases uses Apple’s transaction APIs only. We do not store your payment details.</p>
-
-  <h2>Data sharing</h2>
-  <p>We do not sell your data. We do not share your dates, notes, or photos with third parties. The only sharing is on-device between the Dayminder app and its widget extension via App Group, as described above.</p>
-
-  <h2>Children</h2>
-  <p>Dayminder is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-  <h2>Changes</h2>
-  <p>We may update this policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the app after changes means you accept the updated policy.</p>
-
-  <h2>Questions</h2>
-  <p>Please open an issue on <a href="https://github.com/leon0609/dayminder/issues">GitHub</a> or contact us through the support channel listed on the App Store product page.</p>
-
-  <hr>
-
-  <div class="zh">
-    <h1>Dayminder 隐私政策</h1>
-    <p class="meta">最后更新：2026 年 6 月 25 日</p>
-
-    <p>Dayminder 是一款在设备本地运行的重要日期记录应用。本政策说明当前版本如何处理相关信息。</p>
-
-    <h2>概要</h2>
-    <ul>
-      <li>无需注册或登录。</li>
-      <li>我们不运营接收您的日期、笔记或照片的服务器。</li>
-      <li>数据保存在您的 iPhone 上（若您使用 iCloud 等设备备份，备份策略由 Apple 决定）。</li>
-      <li>不使用第三方分析或广告 SDK，不进行跨应用跟踪。</li>
-    </ul>
-
-    <h2>设备上存储的信息</h2>
-    <ul>
-      <li><strong>事件与设置</strong>：标题、日期、分类、笔记、提醒等。</li>
-      <li><strong>您主动添加的照片</strong>：仅在 Past &amp; Memory 中点击添加照片时，通过系统选择器选取；缩略图与压缩副本保存在应用沙盒。</li>
-      <li><strong>小组件显示数据</strong>：应用与主屏幕小组件通过 App Group 共享精简 JSON 快照，仅含倒计时展示所需字段。</li>
-      <li><strong>Pro 状态缓存</strong>：购买状态可能在本地缓存以便离线使用。</li>
-    </ul>
-
-    <h2>权限</h2>
-    <ul>
-      <li><strong>照片</strong>：仅在您点击添加照片时请求，启动时不请求。</li>
-      <li><strong>通知</strong>：仅在您为事件开启提醒时请求。</li>
-      <li>当前版本不使用日历、通讯录、提醒事项权限。</li>
-    </ul>
-
-    <h2>内购</h2>
-    <p>Dayminder Pro 由 Apple StoreKit 处理支付与收据；我们不保存您的支付卡信息。</p>
-
-    <h2>联系我们</h2>
-    <p><a href="https://github.com/leon0609/dayminder/issues">GitHub Issues</a></p>
-  </div>
+<body data-page="privacy">
+<a class="skip" href="#content">跳到正文 / Skip to content</a>
+<main id="content">
+<nav aria-label="页面与语言 / Pages and languages">
+  <a href="support.html">支持 / Support</a>
+  <a href="privacy.html">隐私 / Privacy</a>
+  <a href="#chinese" lang="zh-Hans">中文</a>
+  <a href="#english" lang="en">English</a>
+</nav>
+<aside class="draft" role="note"><strong>审阅草稿 · 未部署 / Review draft · Not published</strong><br>本页尚未替换线上说明；所述候选范围与入口仍待发行确认。<br><span lang="en">This draft has not replaced the live pages. Release scope and distribution remain unverified.</span></aside>
+<article id="chinese" lang="zh-Hans">
+  <h1>Lovune · 念在隐私说明</h1>
+  <p class="meta">审阅更新：2026 年 10 月 26 日 · 尚未生效</p>
+  <p class="intro">Lovune（早期名称 Dayminder）帮助你保存重要日子、照片和文字记录。这份说明介绍这些功能如何处理内容，以及你可以作出的选择。</p>
+  <section><h2>默认保存在本机</h2>
+<p>使用本地记录不需要注册 Lovune 账户。日期、标题、笔记、提醒偏好、已确认的地点和人物文字等内容保存在设备上的应用数据中；你添加的照片会保存相应的本机副本和缩略图。</p>
+<p>草稿也是本机数据。选入截图后，应用会保存可恢复草稿；部分编辑流程会自动保存草稿。因此，最终按下“保存”之前，选入的内容也可能已经写入本机。已保存记录、草稿和等待继续整理的来源是不同状态。</p>
+</section>
+<section><h2>照片、系统建议和主动分享</h2>
+<p>普通选图由你通过系统界面选择。在你使用里程碑找图等功能并授予照片权限后，应用会在授权范围内按日期等条件查询照片及已有元数据；有限照片授权只允许访问系统允许的范围。拍照功能使用相机权限。我们不会把“选图”描述为已具备整库图片语义理解。</p>
+<p>你从其他应用主动分享的文字、链接或图片会作为待继续整理的来源进入 Lovune；这不授予 Lovune 读取那些应用全部历史内容的权限。系统日记建议由 Apple 管理，应用接收你选中的建议所交付的素材；当前接入以所选照片及可选标题、时间为主。你可以在系统隐私设置中管理建议来源。系统日记建议与下述文字模型不是同一项功能。</p>
+</section>
+<section><h2>截图识字和文字建议何时处理</h2>
+<p>选择截图后，应用会在本机识别其中的文字并解析可能的时间信息。进入适用的截图或来源复核流程时，如果系统模型可用，应用也可能自动请求文字建议，不需要再点一次单独的“AI”按钮。提供给设备端模型的内容可包括交付的文字、已填标题或地点，以及受限的相关记录文字。你可以复核、修改或不采用建议；是否采用建议与是否开始处理内容是两件事。</p>
+<p>当前接入的是设备端 SystemLanguageModel 文字路径，不向该模型交付图片字节，也未接入第三方云模型生成。识字不等于看懂照片里的人物、关系或情绪。Apple Intelligence 是否可用取决于设备、系统、地区、语言和模型状态；没有模型时仍可使用普通文字或照片记录。我们不把“本机模型”扩大为整个应用的所有操作都不联网。</p>
+</section>
+<section><h2>日历、提醒事项、通讯录和订阅日历</h2>
+<p>只有你选择相应导入或连接功能时，应用才请求日历、提醒事项或通讯录权限，不在普通启动时请求这些权限。启用通讯录生日功能后，应用读取姓名和生日来维护派生的日期记录；保持启用且权限允许时，回到相关页面或回到前台也可能继续同步，不需要每次重新点击导入。应用不修改你的通讯录，关联匹配使用单向标识而不是保留原始联系人标识；派生日期仍可能包含你可读的姓名。</p>
+<p>如果你主动添加订阅日历的网址，应用会向该日历源请求内容；后续刷新也会联系该来源。该服务会收到正常网络请求所需的信息，例如 IP 地址。只有订阅和刷新相关数据发送到该来源，这不是将你的整本日记上传给它。你提供的网址及连接协议决定了该请求的目的地与传输方式。</p>
+</section>
+<section><h2>地点建议可能使用 Apple 的地名服务</h2>
+<p>地点可以手动填写，也可以由照片已有的位置元数据提供建议。当前应用不请求设备实时定位权限。在构建照片地点候选时，Apple 的地理编码服务可能收到照片坐标以查询地名；这可能发生在你确认是否保存该地点之前。查询地名与最终将地点写入记录是不同步骤。</p>
+</section>
+<section><h2>可选 iCloud 同步与设备备份</h2>
+<p>私有 iCloud 同步默认关闭，并要求相应的既有 Pro 权益。你开启后，已保存的日期、记录、相关元数据和照片可通过你的 Apple 私有 iCloud 数据库在设备间同步。草稿、未整理来源及本机照片标识符不属于这条记录同步路径。同步运行还受 Apple 账户、网络和系统状态影响。</p>
+<p>Apple 的设备备份是另一项机制，由你的系统备份设置决定。私有 iCloud 数据库、本机存储和设备备份不能一概理解为 Lovune 已保证的端到端加密。关闭同步、删除记录和撤销某项权限也不是同一操作；自行保存的导出文件或已分享副本不会因此自动收回。</p>
+</section>
+<section><h2>提醒、小组件、Apple Watch 与分享</h2>
+<p>重要日子的通知由你设置，并受系统通知权限控制。应用内回望和首页建议另有控制，部分应用内回望设置初始为开；隐藏推荐不会删除已经保存的记录。Apple 系统日记建议通知由系统另外管理，当前不能视为已接通 Lovune 草稿的通知路径。</p>
+<p>小组件通过本机共享容器读取显示所需的精简数据；你使用配对 Apple Watch 功能时，相关显示或交接数据会在配对设备间传递。应用锁定和敏感显示设置用于限制界面展示，不等于所有系统表面和数据副本都具备同一种加密保证。</p>
+<p>导出或分享由你选择目标。导出备份中的照片需主动勾选“Include photos”；导出范围以当前库和界面说明为准。你交给其他应用、文件位置或收件人的内容，随后由相应目标处理。恢复购买只恢复购买权益，不会代替记录备份恢复。</p>
+</section>
+<section><h2>诊断、日志和支持联系</h2>
+<p>应用会生成用于排查问题的技术诊断，例如版本、系统和设备型号、界面偏好及功能状态。你主动打开反馈邮件时，诊断摘要可能预填到邮件正文中；你也可以主动复制诊断到剪贴板。发送前请检查内容，只提供定位问题所需的信息，不必附上日记原文或照片。</p>
+<p>调试日志辅助工具会按预设模式遮盖部分照片标识、坐标和姓名字段；相机等模块还会记录技术错误信息。这不是对所有日志或任意输入均已脱敏的保证。你发出的支持邮件会由邮件服务和收件方处理，与本机日记存储不同。联系地址：<a href="mailto:support@dayminder.app">support@dayminder.app</a>。</p>
+</section>
+<section><h2>保留既有政策承诺</h2>
+<p>沿用现行政策的承诺：我们不出售你的数据、不将其用于广告，也不进行跨应用或网站跟踪。Lovune 并非面向 13 岁以下儿童，我们不会故意收集儿童的个人信息。这些既有承诺未因本次技术说明修订而撤回。</p>
+</section>
+<section><h2>购买、内容清理与说明更新</h2>
+<p>本轮本地核心工具免费，新销售关闭；既有购买可通过 Apple 的恢复购买功能核验。Apple 处理交易和付款信息，Lovune 不接收支付卡号。可选同步是否启用仍由权益和你的设置共同决定。</p>
+<p>你可以编辑或删除应用内记录、调整建议与提醒、管理系统权限，并自行保管或删除导出文件。部分数据可能存在于你选择的备份、同步设备或分享目的地；本说明不承诺删除操作会即时消除所有副本，也不承诺未经实测的无损恢复。</p>
+<p>本说明目前是审阅草稿。最终生效版本须与实际发行范围一致；发布日期和生效说明将在发布获准后确认。有关使用问题，请参阅支持页。</p>
+</section>
+</article>
+<article class="language" id="english" lang="en">
+  <h2>Lovune Privacy Information</h2>
+  <p class="meta">Review updated: October 26, 2026 · Not in effect</p>
+  <p class="intro">Lovune, previously named Dayminder, helps you keep important dates, photos and written entries. This information describes how these features handle content and the choices available to you.</p>
+  <section><h3>Stored on your device by default</h3>
+<p>Local recording does not require a Lovune account. Dates, titles, notes, reminder preferences and confirmed place or people text are stored in the app’s data on your device. Photos you add have local copies and thumbnails.</p>
+<p>Drafts are also local data. Selecting a screenshot creates a recoverable draft, and some editing flows save drafts automatically. Selected content may therefore be written to the device before you press the final Save action. Saved entries, drafts and sources awaiting review are different states.</p>
+</section>
+<section><h3>Photos, system suggestions and content you share</h3>
+<p>For ordinary photo selection, you choose images through system interfaces. If you use features such as milestone photo lookup and grant photo access, the app can query photos and existing metadata within the permitted scope, including by date. Limited access is restricted to the photos allowed by the system. Taking a photo requires camera permission. Photo selection does not mean the app understands the visual meaning of your entire library.</p>
+<p>Text, links or images you actively share from another app enter Lovune as sources to continue reviewing. This does not grant access to that app’s complete history. Apple manages Journaling Suggestions, and Lovune receives material from suggestions you select. The current integration primarily uses selected photos and optional title or time information. You can manage suggestion categories in system privacy settings. Journaling Suggestions is separate from the text model described below.</p>
+</section>
+<section><h3>When screenshot text and suggestions are processed</h3>
+<p>After you choose a screenshot, the app recognizes its text on the device and parses possible time information. In applicable screenshot or source-review flows, the app may also request text suggestions automatically when the system model is available; a separate AI button is not required. Input to the device-side model can include the text you supplied, an entered title or place and a limited amount of related-entry text. You can review, edit or decline a suggestion. Accepting a suggestion is separate from starting the processing.</p>
+<p>The current integration uses the on-device SystemLanguageModel text path. It does not send image bytes to that model or use a third-party cloud generation model. Reading text is not an ability to understand people, relationships or emotions in a photo. Apple Intelligence availability depends on the device, operating system, region, language and model readiness. Ordinary text and photo recording remain available without the model. On-device model processing does not mean that every operation in the app is offline.</p>
+</section>
+<section><h3>Calendar, Reminders, Contacts and calendar subscriptions</h3>
+<p>The app requests Calendar, Reminders or Contacts access when you choose the relevant import or connection feature, not during an ordinary launch. After you enable contact birthdays, it reads names and birthday components to maintain derived date records. While the feature remains enabled and permission is available, returning to the relevant screen or foreground can continue synchronization without another import action. The app does not modify your contacts. It uses a one-way identifier for matching instead of retaining the raw contact identifier; the derived dates can still contain readable names.</p>
+<p>If you add a calendar subscription URL, the app requests content from that calendar source, including on later refreshes. The service receives information normally involved in a network request, such as your IP address. This connection is for the subscription and its refresh; it does not upload your whole journal to the source. The URL and protocol you provide determine the destination and transport used.</p>
+</section>
+<section><h3>Place suggestions can use Apple’s geocoding service</h3>
+<p>You can enter a place yourself or use a suggestion derived from existing photo-location metadata. The current app does not request live device-location permission. While preparing photo-context candidates, Apple’s geocoding service may receive photo coordinates to resolve a place name. This can happen before you confirm whether to save that place. Looking up the name and writing the place into an entry are separate steps.</p>
+</section>
+<section><h3>Optional iCloud sync and device backups</h3>
+<p>Private iCloud sync is off by default and requires the applicable existing Pro entitlement. If you enable it, saved dates, entries, related metadata and photos can sync through your private Apple iCloud database. Drafts, unresolved sources and local Photos identifiers are not part of this entry-sync path. Sync also depends on the Apple account, network and system state.</p>
+<p>Apple device backup is a separate mechanism controlled by your system backup settings. Private iCloud storage, local storage and device backups should not be treated as a single Lovune guarantee of end-to-end encryption. Turning sync off, deleting an entry and revoking a permission are different actions; they do not automatically recall files you exported or copies you shared.</p>
+</section>
+<section><h3>Reminders, widgets, Apple Watch and sharing</h3>
+<p>You configure important-date notifications, subject to system notification permission. In-app resurfacing and Home suggestions have separate controls, and some in-app resurfacing preferences are initially enabled. Hiding a recommendation does not delete a saved entry. Apple separately controls Journaling Suggestions notifications; the current app has not completed their continuation into a Lovune draft.</p>
+<p>Widgets read limited display data through a shared local container. When you use paired Apple Watch features, the necessary display or handoff data can move between paired devices. App Lock and sensitive-display settings limit presentation; they are not a guarantee that every system surface or data copy has the same encryption protection.</p>
+<p>You choose where to export or share content. Including photos in a backup requires selecting Include photos. Export scope follows the current library and the interface’s explanation. Content you give to another app, file location or recipient is then handled by that destination. Restore Purchases restores purchase entitlements, not your journal backup.</p>
+</section>
+<section><h3>Diagnostics, logs and support</h3>
+<p>The app creates technical diagnostics such as its version, operating system and device model, interface preferences and feature status. When you initiate a feedback email, a diagnostic summary may be inserted into the message; you can also choose to copy diagnostics to the clipboard. Review what you send and provide only what is needed to explain the problem. You do not need to include journal text or photos.</p>
+<p>Debug logging helpers redact some photo identifiers, coordinates and name fields using predefined patterns. Other components, including the camera, also log technical errors. This does not guarantee that every log or arbitrary input is fully redacted. A support email you send is handled by the mail service and recipient, separately from local journal storage. Contact: <a href="mailto:support@dayminder.app">support@dayminder.app</a>.</p>
+</section>
+<section><h3>Existing policy commitments remain</h3>
+<p>We retain the existing commitments not to sell your data, use it for advertising or track you across apps or websites. Lovune is not directed at children under 13, and we do not knowingly collect personal information from children. This technical revision does not withdraw those commitments.</p>
+</section>
+<section><h3>Purchases, managing content and updates</h3>
+<p>Local core tools remain free for this cycle and new sales are closed. Existing purchases can be checked through Apple’s restore mechanism. Apple handles transactions and payment information; Lovune does not receive payment card numbers. Optional sync still depends on both entitlement and your setting.</p>
+<p>You can edit or delete app entries, adjust suggestions and reminders, manage system permissions and keep or delete exported files yourself. Content may also remain in backups, synced devices or destinations you chose. This information does not promise that deletion immediately removes every copy or that an untested restore is lossless.</p>
+<p>This is a review draft. The version put into effect must match the actual release scope; publication and effective-date information will be confirmed after publication is authorized. See the support page for help.</p>
+</section>
+</article>
+<footer><a href="support.html">支持 / Support</a> · <a href="privacy.html">隐私 / Privacy</a> · <a href="mailto:support@dayminder.app">support@dayminder.app</a></footer>
+</main>
 </body>
 </html>
